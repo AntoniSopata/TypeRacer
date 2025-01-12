@@ -13,6 +13,7 @@ make all
 python3 klient.py
 
 
+
 Opis:
 TypeRacer - wieloosobowa gra polegająca na szybkim pisaniu na klawiaturze
 
