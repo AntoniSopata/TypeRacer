@@ -34,4 +34,3 @@ TypeRacer - wieloosobowa gra polegająca na szybkim pisaniu na klawiaturze
 - ranking z wynikami (nick, WPM, czas ukończenia, średnią prędkość, poprawność)
 - przycisk umożliwiający rozpoczęcie gry jeśli osoba jest administratorem gry
 - gracz może w dowolnym momencie opuścić pokój. Jeśli administrator opuści grę, jego rolę przejmuje kolejny gracz.
-- 
