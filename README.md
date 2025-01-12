@@ -5,8 +5,11 @@
 - 155953
 
 Komendy by uruchomić:
+
 make all
+
 ./serwer
+
 python3 klient.py
 
 
