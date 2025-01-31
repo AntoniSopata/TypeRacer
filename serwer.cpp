@@ -144,9 +144,19 @@ public:
             throw std::runtime_error("Failed to create socket");
         }
 
-        const int one = 1;
-        setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(one));
 
+        const int one = 1;
+        setsockopt(serverSocket, SOL_SOCKET, SO_KEEPALIVE, &one, sizeof(one));
+
+        int keepIdle = 4;
+        int keepInterval = 2;
+        int keepCount = 2;
+
+        setsockopt(serverSocket, IPPROTO_TCP, TCP_KEEPIDLE, &keepIdle, sizeof(keepIdle));
+        setsockopt(serverSocket, IPPROTO_TCP, TCP_KEEPINTVL, &keepInterval, sizeof(keepInterval));
+        setsockopt(serverSocket, IPPROTO_TCP, TCP_KEEPCNT, &keepCount, sizeof(keepCount));
+
+        
         sockaddr_in serverAddr{};
         serverAddr.sin_family = AF_INET;
         serverAddr.sin_addr.s_addr = INADDR_ANY;
